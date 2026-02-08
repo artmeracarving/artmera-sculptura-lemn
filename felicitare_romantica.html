@@ -392,15 +392,14 @@ select {
     </div>
 
     <div id="printable-card">
-        <div style="font-size: 1.2rem; font-weight: bold; color: var(--pink);">Suntem noi...</div>
+        
+        <div id="intro-text" style="font-size: 1.2rem; font-weight: bold; margin-bottom: 5px;">
+                Suntem noi...
+            </div>
 
-       <div id="names-line" style="margin-top:10px; font-size:1.1rem; color:var(--accent);">
+        <div id="names-line" style="margin-top:10px; font-size:1.1rem;">
             Numele lui & Numele ei
         </div>
-        
-     
-
-     
         
         <div class="photo-container">
             <div class="photo-box"><img id="img-him"></div>
@@ -512,21 +511,19 @@ select {
     </script>
 
     <script>
-          function changeFont() {
+        function changeFont() {
                 const font = document.getElementById("font-select").value;
                 const card = document.getElementById("printable-card");
-                const textElement = document.getElementById("card-text");
+                const intro = document.getElementById("intro-text"); // Referință pentru "Suntem noi..."
             
                 card.style.fontFamily = font;
             
                 if (font.includes("Dancing") || font.includes("Great") || font.includes("Parisienne")) {
                     card.style.fontSize = "1.3rem";
-                   
-                    f (textElement) textElement.style.lineHeight = "1.4";
+                    if (intro) intro.style.color = "var(--accent)"; // Se face roz/auriu/albastru în funcție de temă
                 } else {
                     card.style.fontSize = "1.1rem";
-                   
-                    if (textElement) textElement.style.lineHeight = "1.35";
+                    if (intro) intro.style.color = "var(--pink)"; // Revine la culoarea setată de tine inițial
                 }
             }
 
