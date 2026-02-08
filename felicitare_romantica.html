@@ -97,7 +97,7 @@ h1 {
     margin-bottom: 6px;
 }
 
-input[type="text"], input[type="file"] {
+/*input[type="text"], input[type="file"] {
     width: 90%;
     padding: 12px;
     border: 1px solid var(--border);
@@ -120,16 +120,57 @@ select {
 select option { 
     background: #111; 
     color: var(--text-light); 
-}
+}*/
+input[type="text"], 
+input[type="file"], 
+select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: #111;
+            color: var(--text-light);
+            box-sizing: border-box;
+        }
 
 
 /* Wrapper pentru icon + select */
-.select-wrapper {
+/*.select-wrapper {
     position: relative;
     width: 90%;
     background: transparent;
     margin-bottom: 20px;
 }
+       
+#auto-messages {
+    width: 100%;
+    padding: 12px 14px 12px 42px; 
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: linear-gradient(135deg, #111, #1b1b1b);
+    color: var(--text-light);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.25s ease;
+    appearance: none;
+}
+#auto-messages:hover {
+    border-color: var(--accent);
+   
+    background: #111 !important; 
+    color: var(--text-light) !important;
+}
+#auto-messages:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 10px rgba(74,144,226,0.5);
+}
+
+#auto-messages option { 
+    background: #111; 
+    color: var(--text-light); 
+}
+*/
 
 /* Icon inimă ❤️ */
 .select-icon {
@@ -142,39 +183,6 @@ select option {
     color: var(--accent);
 }
 
-/* Select modern */
-#auto-messages {
-    width: 100%;
-    padding: 12px 14px 12px 42px; /* spațiu pentru icon */
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    background: linear-gradient(135deg, #111, #1b1b1b);
-    color: var(--text-light);
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.25s ease;
-    appearance: none;
-}
-
-/* Hover */
-#auto-messages:hover {
-    border-color: var(--accent);
-   
-    background: #111 !important; 
-    color: var(--text-light) !important;
-}
-
-/* Focus */
-#auto-messages:focus {
-    outline: none;
-    border-color: var(--accent);
-    box-shadow: 0 0 10px rgba(74,144,226,0.5);
-}
-
-#auto-messages option { 
-    background: #111; 
-    color: var(--text-light); 
-}
 
 
 /* Felicitare */
