@@ -15,6 +15,7 @@
             --text-light: #EAEAEA;
             --accent: #4A90E2;
             --border: #333333;       /* borduri */
+            --pink: #ff4d6d;
         }
 
 
@@ -75,14 +76,6 @@ h1 {
     text-decoration: underline;
     opacity: 0.9;
 }
-
-/* Ascundem tot la print */
-@media print {
-    #site-header {
-        display: none !important;
-    }
-}
-
 
 /* Panou configurare */
 .config-panel {
@@ -249,16 +242,16 @@ select option {
 }
 
 /* Text felicitare */
+
 #card-text {
     margin-top: 30px;
     font-size: 1.2rem;
-    color: var(--accent);
+    color: inherit; /* Va lua culoarea textului definită de temă */
     text-align: center;
     font-family: 'Georgia', serif;
     font-style: italic;
     line-height: 1.4;
 }
-
 
 
 .pulse-heart {
@@ -514,15 +507,18 @@ select option {
           function changeFont() {
                 const font = document.getElementById("font-select").value;
                 const card = document.getElementById("printable-card");
+                const textElement = document.getElementById("card-text");
             
                 card.style.fontFamily = font;
             
                 if (font.includes("Dancing") || font.includes("Great") || font.includes("Parisienne")) {
                     card.style.fontSize = "1.3rem";
-                    text.style.lineHeight = "1.4";
+                   
+                    f (textElement) textElement.style.lineHeight = "1.4";
                 } else {
                     card.style.fontSize = "1.1rem";
-                    text.style.lineHeight = "1.35";
+                   
+                    if (textElement) textElement.style.lineHeight = "1.35";
                 }
             }
 
